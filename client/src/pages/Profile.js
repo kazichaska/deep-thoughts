@@ -18,7 +18,7 @@ const Profile = () => {
 
   const user = data?.me || data?.user || {};
   // redirect to personal profile page if username is the logged-in user's
-  if (Auth.loggedIn() && Auth.getProfile().data.username == useParams) {
+  if (Auth.loggedIn() && Auth.getProfile().data.username === useParams) {
     return <Redirect to="/profile" />;
   }
   if (loading) {
